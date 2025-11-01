@@ -103,8 +103,8 @@
             font-weight: 700;
             text-decoration: none;
             transition: transform 0.15s ease;
-            
-            
+
+
         }
 
         .logo:hover {
@@ -483,9 +483,9 @@
 
         /* Faculty photo area: use an <img> inside this wrapper to cover the area */
         .faculty-img {
-            
+
             width: 100%;
-            height: 70%;
+            height: 60%;
             /* height: var(--faculty-height); */
             overflow: hidden;
             border-radius: var(--photo-border-radius) var(--photo-border-radius) 0 0;
@@ -498,9 +498,9 @@
 
         .faculty-img img {
             width: 100%;
-            height: 340px;
-            object-fit: cover;
-            object-position: top; 
+            height: 210px;
+            object-fit: fill;
+            object-position: top;
             display: block;
             transition: transform 0.4s ease, opacity 0.24s ease;
             opacity: 1;
@@ -822,6 +822,7 @@
                 display: none;
             }
         }
+
         /* Additional / Supporting Staff styles */
         .additional-faculty {
             background: #f8f9fa;
@@ -865,12 +866,41 @@
         }
 
         /* Color variants for staff cards - match site theme (soft school blues/purples/accents) */
-        .staff-card.color-1 { background: linear-gradient(180deg,#667eea 0%, #8a95f6 100%); color: white; border-color: rgba(102,126,234,0.12); }
-        .staff-card.color-2 { background: linear-gradient(180deg,#764ba2 0%, #9661bf 100%); color: white; border-color: rgba(118,75,162,0.12); }
-        .staff-card.color-3 { background: linear-gradient(180deg,#4db6ac 0%, #76d8c9 100%); color: #062a2a; border-color: rgba(77,182,172,0.08); }
-        .staff-card.color-4 { background: linear-gradient(180deg,#5a6fac 0%, #e9f0ff 100%); color: #163058; border-color: rgba(103,126,234,0.04); }
-        .staff-card.color-5 { background: linear-gradient(180deg,#ceb7a3 0%, #fff1e6 100%); color: #4a2b0f; border-color: rgba(255,200,150,0.06); }
-        .staff-card.color-6 { background: linear-gradient(180deg,#7c9fab 0%, #cbd6d8 100%); color: #073444; border-color: rgba(0,180,200,0.06); }
+        .staff-card.color-1 {
+            background: linear-gradient(180deg, #667eea 0%, #8a95f6 100%);
+            color: white;
+            border-color: rgba(102, 126, 234, 0.12);
+        }
+
+        .staff-card.color-2 {
+            background: linear-gradient(180deg, #764ba2 0%, #9661bf 100%);
+            color: white;
+            border-color: rgba(118, 75, 162, 0.12);
+        }
+
+        .staff-card.color-3 {
+            background: linear-gradient(180deg, #4db6ac 0%, #76d8c9 100%);
+            color: #062a2a;
+            border-color: rgba(77, 182, 172, 0.08);
+        }
+
+        .staff-card.color-4 {
+            background: linear-gradient(180deg, #5a6fac 0%, #e9f0ff 100%);
+            color: #163058;
+            border-color: rgba(103, 126, 234, 0.04);
+        }
+
+        .staff-card.color-5 {
+            background: linear-gradient(180deg, #ceb7a3 0%, #fff1e6 100%);
+            color: #4a2b0f;
+            border-color: rgba(255, 200, 150, 0.06);
+        }
+
+        .staff-card.color-6 {
+            background: linear-gradient(180deg, #7c9fab 0%, #cbd6d8 100%);
+            color: #073444;
+            border-color: rgba(0, 180, 200, 0.06);
+        }
 
         /* Improve hover contrast for colored cards */
         .staff-card.color-1:hover,
@@ -879,8 +909,180 @@
         .staff-card.color-4:hover,
         .staff-card.color-5:hover,
         .staff-card.color-6:hover {
-            box-shadow: 0 20px 40px rgba(102,126,234,0.14);
+            box-shadow: 0 20px 40px rgba(102, 126, 234, 0.14);
         }
+
+        /* Students in Action section styles */
+        .students-action {
+            background: #fbfdff;
+            padding-top: 2.5rem;
+            padding-bottom: 3.5rem;
+        }
+
+        .students-action .section-title {
+            color: #4a6bd6;
+        }
+
+        .students-action p.description {
+            text-align: center;
+            max-width: 900px;
+            margin: 0.5rem auto 1rem;
+            color: #444;
+            font-size: 1rem;
+        }
+
+        .students-action .videos-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 1.5rem;
+            margin-top: 1.5rem;
+            align-items: start;
+            justify-items: center;
+            max-width: 900px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .students-action .video-card {
+            background: white;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 8px 30px rgba(0, 0, 0, 0.08);
+            transition: transform 0.28s ease, box-shadow 0.28s ease;
+            text-align: center;
+            padding: 0.6rem;
+            width: 100%;
+            max-width: 280px;
+        }
+
+        .students-action .video-card:hover {
+            transform: translateY(-6px) scale(1.02);
+            box-shadow: 0 18px 50px rgba(102, 126, 234, 0.18);
+        }
+
+        .students-action .video-wrap {
+            position: relative;
+            padding-top: 177.77%;
+            /* Shorts ratio (9:16) */
+            overflow: hidden;
+            border-radius: 10px;
+            background: #f0f2f5;
+        }
+
+        .students-action .video-wrap iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            border: 0;
+            transition: transform 0.5s ease;
+        }
+
+        .students-action .video-card:hover .video-wrap iframe {
+            transform: scale(1.04);
+        }
+
+        .students-action .video-title {
+            margin-top: 0.7rem;
+            font-weight: 600;
+            color: #333;
+        }
+
+        @media (max-width: 520px) {
+            .students-action .description {
+                padding: 0 0.75rem;
+            }
+        }
+
+        /* Find Us / Location Section (editable text and colors) */
+        .school-address {
+            background: #f9fbff; /* light background as requested */
+            padding: 4rem 1rem;
+            font-family: Arial, Helvetica, sans-serif; /* easy editable local font */
+        }
+
+        .school-address .wrap {
+            max-width: 900px;
+            margin: 0 auto;
+            text-align: center;
+            padding: 2rem;
+        }
+
+        .school-address .section-title {
+            font-size: 2rem;
+            color: #1e4fe0; /* primary blue - easy to change */
+            margin-bottom: 0.5rem;
+        }
+
+        .school-address .subtitle {
+            color: #333;
+            font-size: 1rem;
+            line-height: 1.6;
+            margin-bottom: 1.25rem;
+        }
+
+        .school-address .map-container {
+            border-radius: 14px;
+            overflow: hidden;
+            box-shadow: 0 12px 30px rgba(30, 78, 224, 0.12);
+            background: #fff;
+            margin: 0 auto 1.25rem;
+            max-width: 900px;
+        }
+
+        .school-address .map-wrapper {
+            position: relative;
+            width: 100%;
+            padding-bottom: 56.25%; /* 16:9 */
+            height: 0;
+        }
+
+        .school-address .map-wrapper iframe {
+            position: absolute;
+            inset: 0;
+            width: 100%;
+            height: 100%;
+            border: 0;
+            display: block;
+        }
+
+        .school-address .directions-btn {
+            display: inline-block;
+            background: #1e6ef3; /* blue */
+            color: #fff;
+            padding: 0.75rem 1.25rem;
+            border-radius: 999px;
+            text-decoration: none;
+            font-weight: 600;
+            box-shadow: 0 8px 20px rgba(30, 110, 243, 0.12);
+            transition: transform 0.18s ease, box-shadow 0.18s ease, background 0.18s ease;
+        }
+
+        .school-address .directions-btn:hover,
+        .school-address .directions-btn:focus {
+            transform: translateY(-3px);
+            box-shadow: 0 14px 34px rgba(30, 110, 243, 0.16);
+            background: #145de0;
+        }
+
+        @media (max-width: 768px) {
+            .school-address { padding: 3rem 0.75rem; }
+            .school-address .wrap { padding: 1rem; }
+            .school-address .section-title { font-size: 1.6rem; }
+            .school-address .subtitle { font-size: 0.98rem; }
+        }
+
+        /* Video interaction visuals */
+        .students-action .video-card {
+            position: relative;
+        }
+
+        /* Ensure rounded corners on iframe via wrapper and force hardware accel for smoother animation */
+        .students-action .video-wrap {
+            will-change: transform;
+        }
+    </style>
     </style>
 </head>
 
@@ -924,18 +1126,18 @@
     <section class="additional-faculty" id="additional-faculty">
         <div class="container">
             <h2 class="section-title">Additional Faculty Members</h2>
-            <p style="text-align:center; max-width:900px; margin:0.5rem auto 1.25rem; color:#444;">Supporting staff and assistant teachers who help run day-to-day activities. Click a name to highlight.</p>
+            <p style="text-align:center; max-width:900px; margin:0.5rem auto 1.25rem; color:#444;">Supporting staff and
+                assistant teachers who help run day-to-day activities. Click a name to highlight.</p>
 
             <div class="staff-grid" role="list">
-                <div class="staff-card color-1" role="listitem"><a href="#">Sushma Verma</a></div>
-                <div class="staff-card color-2" role="listitem"><a href="#">Deepak Kumar</a></div>
-                <div class="staff-card color-3" role="listitem"><a href="#">Neha Singh</a></div>
-                <div class="staff-card color-4" role="listitem"><a href="#">Vikram Patel</a></div>
-                <div class="staff-card color-5" role="listitem"><a href="#">Sunita Rani</a></div>
-                <div class="staff-card color-6" role="listitem"><a href="#">Anil Mehta</a></div>
-                <div class="staff-card color-1" role="listitem"><a href="#">Priya Sharma</a></div>
-                <div class="staff-card color-2" role="listitem"><a href="#">Ramesh Yadav</a></div>
-                <div class="staff-card color-3" role="listitem"><a href="#">Rekha Gupta</a></div>
+                <div class="staff-card color-1" role="listitem"><a href="#">Bhavna Sharma Mam</a></div>
+                <div class="staff-card color-1" role="listitem"><a href="#">Aarti Yadav Mam</a></div>
+                <div class="staff-card color-2" role="listitem"><a href="#">Monika Kansal Mam</a></div>
+                <div class="staff-card color-2" role="listitem"><a href="#">Sweta Mam</a></div>
+                <div class="staff-card color-3" role="listitem"><a href="#">Sashi Pal Mam</a></div>
+                <div class="staff-card color-4" role="listitem"><a href="#">Piya Das Mam</a></div>
+                <div class="staff-card color-5" role="listitem"><a href="#">Nidhi Sharma Mam</a></div>
+                <div class="staff-card color-6" role="listitem"><a href="#">Hirdesh Sir</a></div>
             </div>
         </div>
     </section>
@@ -1008,8 +1210,8 @@
                     <h3>Madhu Sharma</h3>
                     <p>Wise Principal</p>
                 </div>
-                </div>
             </div>
+        </div>
         </div>
     </section>
 
@@ -1018,25 +1220,30 @@
         <div class="container">
             <h2 class="section-title">Our Faculty</h2>
             <div class="faculty-grid">
-                
-                
+
+                <div class="faculty-card">
+                    <div class="faculty-img"><img src="xy.jpg" alt="Rohit sir" loading="lazy" data-name="Rohit Sir">
+                    </div>
+                    <div class="faculty-info">
+                        <h3>Rohit Sir</h3>
+                        <p>Teacher - Computer</p>
+                        <p>Qualification: Master of Arts (M.A) </p>
+                    </div>
+
+                </div>
+
                 <div class="faculty-card">
                     <div class="faculty-img"><img src="tanu.jpg" alt="Sanjana Gupta" loading="lazy"
                             data-name="Sanjana Gupta"></div>
                     <div class="faculty-info">
                         <h3>Sanjana Gupta</h3>
-                        <p>Teacher - Social Studies & Arts</p>
+                        <p>Teacher - Arts</p>
+                        <p>Qualification: Bachelor of Fine Arts (BFA)</p>
                     </div>
+
                 </div>
-                <div class="faculty-card">
-                    <div class="faculty-img"><img src="xy.jpg" alt="Rohit sir" loading="lazy"
-                            data-name="Rohit Sir"></div>
-                    <div class="faculty-info">
-                        <h3>Rohit Sir</h3>
-                        <p>Teacher - Physical Education</p>
-                    </div>
-                </div>
-            </div>  
+
+            </div>
         </div>
     </section>
 
@@ -1065,15 +1272,48 @@
                     <h3>Olympiads</h3>
                     <p>Competitive exams</p>
                 </div>
-                <div class="activity-card">
-                    <div class="activity-icon">🏊</div>
-                    <h3>Swimming</h3>
-                    <p>Professional training</p>
+
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Students in Action (YouTube Shorts) Section -->
+    <section class="students-action" id="students-action">
+        <div class="container">
+            <h2 class="section-title">📱 Students in Action – Our Shorts</h2>
+            <p class="description">Watch our students' latest moments and activities in fun, quick YouTube Shorts: <a
+                    href="https://youtube.com/@sanjanaguptaartsgallery?si=SGIYJzcT8FECM5en" target="_blank"
+                    rel="noopener noreferrer" style="color:#4a6bd6; font-weight:600; text-decoration:underline;">Follow
+                    Us on YouTube</a></p>
+
+            <div class="videos-grid">
+                <div class="video-card">
+                    <div class="video-wrap">
+                        <iframe src="https://youtube.com/shorts/DmQZ3WRJ-c4?si=WnW_FxF5uOrv88TZ"
+                            title="Cultural Activity"
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                            allowfullscreen loading="lazy"></iframe>
+                    </div>
+                    <p class="video-title">Accepting Admissions</p>
                 </div>
-                <div class="activity-card">
-                    <div class="activity-icon">🥋</div>
-                    <h3>Judo Karate</h3>
-                    <p>Self-defense classes</p>
+
+                <div class="video-card">
+                    <div class="video-wrap">
+                        <iframe src="https://youtube.com/embed/u_vwx_gl74k?si=nmu3Sz-HZiJUi0iy" title="Art & Craft"
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                            allowfullscreen loading="lazy"></iframe>
+                    </div>
+                    <p class="video-title">Art & Craft</p>
+                </div>
+
+                <div class="video-card">
+                    <div class="video-wrap">
+                        <iframe src="https://youtube.com/embed/ZQyi-f3ZjP4?si=XbD0HGk46IowmHVC" title="Fun Learning"
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                            allowfullscreen loading="lazy"></iframe>
+                    </div>
+                    <p class="video-title">Fun Learning</p>
                 </div>
             </div>
         </div>
@@ -1147,6 +1387,33 @@
         </div>
     </section>
 
+    <!-- Find Us / Location Section -->
+    <section class="school-address" id="find-us">
+        <div class="wrap">
+            <div class="section-title">📍 Find Us on Map</div>
+
+            <div class="subtitle">
+                Rohit Modern Public School,<br>
+                173, Near Rohit Modern High School,<br>
+                Budh Vihar, Bahrampur, Vijay Nagar,<br>
+                Ghaziabad, Uttar Pradesh 201009
+            </div>
+
+            <div class="map-container" aria-hidden="false">
+                <div class="map-wrapper">
+                    <iframe
+                        src="https://www.google.com/maps?q=Rohit+Modern+Public+School,+Budh+Vihar,+Ghaziabad,+Uttar+Pradesh+201009&z=16&output=embed"
+                        loading="lazy" allowfullscreen referrerpolicy="no-referrer-when-downgrade"
+                        title="Rohit Modern Public School location map"></iframe>
+                </div>
+            </div>
+
+            <a class="directions-btn"
+                href="https://www.google.com/maps/place/Rohit+Modern+Public+School,+Budh+Vihar,+Ghaziabad,+Uttar+Pradesh+201009"
+                target="_blank" rel="noopener noreferrer">Get Directions</a>
+        </div>
+    </section>
+
     <!-- Footer -->
     <footer>
         <div class="container">
@@ -1161,6 +1428,139 @@
         </div>
     </footer>
 
+    <script>
+        // Students Shorts interaction using YouTube Iframe API (no external libraries)
+        (function () {
+            // collect all iframes in the students-action section
+            const container = document.querySelector('.students-action');
+            if (!container) return;
+
+            const iframes = Array.from(container.querySelectorAll('.video-wrap iframe'));
+
+            // Normalize src to use /embed/VIDEO_ID and enable JS API
+            function extractVideoId(src) {
+                try {
+                    const u = new URL(src, location.href);
+                    // examples: /shorts/ID, watch?v=ID, /embed/ID
+                    const p = u.pathname.split('/');
+                    if (p.includes('shorts')) {
+                        return p[p.indexOf('shorts') + 1];
+                    }
+                    if (p.includes('embed')) {
+                        return p[p.indexOf('embed') + 1];
+                    }
+                    if (u.searchParams.has('v')) return u.searchParams.get('v');
+                    // fallback: last path segment
+                    return p.pop() || '';
+                } catch (e) {
+                    return '';
+                }
+            }
+
+            // assign ids and rebuild src
+            iframes.forEach((iframe, idx) => {
+                const src = iframe.getAttribute('src') || '';
+                const vid = extractVideoId(src);
+                if (!vid) return;
+                const newSrc = 'https://www.youtube.com/embed/' + vid + '?enablejsapi=1&rel=0&modestbranding=1&playsinline=1';
+                iframe.setAttribute('src', newSrc);
+                iframe.classList.add('yt-short-player');
+                if (!iframe.id) iframe.id = 'yt-short-' + idx + '-' + vid;
+                // ensure allow attributes are present for autoplay API (muted play on hover)
+                iframe.setAttribute('allow', 'accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture');
+                iframe.setAttribute('loading', 'lazy');
+                // get parent card for interactions
+                const card = iframe.closest('.video-card');
+            });
+
+            // load YouTube Iframe API
+            let YTready = false;
+            let players = {};
+
+            function onYouTubeIframeAPIReady() {
+                YTready = true;
+                initPlayers();
+            }
+
+            // expose global callback for API
+            window.onYouTubeIframeAPIReady = onYouTubeIframeAPIReady;
+
+            function initPlayers() {
+                if (!window.YT || !YT.Player) return;
+                const frames = Array.from(container.querySelectorAll('iframe.yt-short-player'));
+                frames.forEach((iframe) => {
+                    const id = iframe.id;
+                    if (players[id]) return;
+                    players[id] = new YT.Player(id, {
+                        events: {
+                            onReady: function (e) {
+                                // ensure the player is muted initially for hover autoplay
+                                try { e.target.mute(); } catch (e) { }
+                            }
+                        }
+                    });
+                    attachInteractions(iframe, players[id]);
+                });
+            }
+
+            function attachInteractions(iframe, player) {
+                const card = iframe.closest('.video-card');
+                const badge = card.querySelector('.sound-badge');
+
+                let clickToggle = false;
+
+                // hover to play muted
+                card.addEventListener('mouseenter', () => {
+                    if (!player || !player.playVideo) return;
+                    try {
+                        player.mute();
+                        player.playVideo();
+                        if (badge) badge.textContent = '🔇 Muted';
+                    } catch (e) { }
+                });
+
+                // leave to pause and reset
+                card.addEventListener('mouseleave', () => {
+                    if (!player || !player.pauseVideo) return;
+                    try {
+                        player.pauseVideo();
+                        // reset to start
+                        player.seekTo(0, true);
+                        // keep muted state unless user toggled
+                        if (!clickToggle) player.mute();
+                        if (badge) badge.textContent = clickToggle ? '🔊 Unmuted' : '🔇 ';
+                    } catch (e) { }
+                });
+
+                // click to toggle mute/unmute
+                card.addEventListener('click', (ev) => {
+                    // user interaction - toggle mute
+                    if (!player || !player.isMuted) return;
+                    try {
+                        if (player.isMuted()) {
+                            player.unMute();
+                            clickToggle = true;
+                        } else {
+                            player.mute();
+                            clickToggle = false;
+                        }
+                        // ensure video is playing when unmuted
+                        player.playVideo();
+                    } catch (e) { }
+                });
+            }
+
+            // inject the API script
+            const tag = document.createElement('script');
+            tag.src = 'https://www.youtube.com/iframe_api';
+            document.head.appendChild(tag);
+
+            // fallback: init players when API already available
+            setTimeout(() => {
+                if (window.YT && window.YT.Player) onYouTubeIframeAPIReady();
+            }, 1000);
+        })();
+    </script>
 
 </body>
 
